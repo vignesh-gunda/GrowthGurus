@@ -433,9 +433,12 @@ export function buildCampaignFromInstagramRecords(
         platform: "instagram",
         location_id: `sf-instagram-${index + 1}`,
         zone_id: record.zoneId,
+        zone_label: record.zoneLabel,
         source,
         campaign: input.productName,
-        hashtags: record.hashtags
+        hashtags: record.hashtags,
+        comment: record.comment,
+        comment_date: record["comment date"]
       },
       geometry: {
         type: "Point",
@@ -577,8 +580,11 @@ function createPointCluster({
       platform,
       location_id: locationId,
       zone_id: zoneId,
+      zone_label: zoneId,
       source: "mock_onboarding_preview",
-      campaign: productName
+      campaign: productName,
+      comment: "Mock campaign point",
+      comment_date: ""
     },
     geometry: {
       type: "Point",
