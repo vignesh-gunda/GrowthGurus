@@ -20,6 +20,7 @@ html,
 body {
   margin: 0;
   min-height: 100%;
+  font-size: 20px;
   background:
     radial-gradient(circle at top left, rgba(215, 102, 47, 0.16), transparent 30%),
     radial-gradient(circle at top right, rgba(14, 116, 144, 0.14), transparent 26%),
@@ -29,7 +30,7 @@ body {
 
 body {
   font-family: var(--font-body), sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   background:
     radial-gradient(circle at 0% 0%, rgba(222, 111, 55, 0.14), transparent 24%),
@@ -295,8 +296,148 @@ a {
 }
 
 .mapboxgl-popup-content {
-  border-radius: 16px;
-  padding: 12px 14px;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.heatmap-hover-popup .mapboxgl-popup-content {
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+  background: rgba(255, 252, 247, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.map-info-card {
+  min-width: 200px;
+  max-width: 260px;
+  color: #111827;
+}
+
+.map-info-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.map-info-eyebrow {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(17, 24, 39, 0.5);
+}
+
+.map-info-title {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #101828;
+}
+
+.map-info-chip {
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(215, 102, 47, 0.2);
+  background: rgba(215, 102, 47, 0.12);
+  padding: 0.28rem 0.52rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #92400e;
+}
+
+.map-info-subtitle {
+  margin-top: 0.25rem;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  color: rgba(17, 24, 39, 0.6);
+}
+
+.map-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+
+.map-info-stat {
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.42rem 0.55rem;
+}
+
+.map-info-stat-label {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17, 24, 39, 0.5);
+}
+
+.map-info-stat-value {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #101828;
+}
+
+.map-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 0.55rem;
+}
+
+.map-info-row-label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17, 24, 39, 0.5);
+}
+
+.map-info-row-value {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  text-align: right;
+  color: rgba(17, 24, 39, 0.85);
+  font-weight: 600;
+}
+
+.map-info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+}
+
+.map-info-tag {
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.08);
+  padding: 0.24rem 0.48rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: rgba(17, 24, 39, 0.8);
+}
+
+.map-info-tag-muted {
+  opacity: 0.65;
+}
+
+.map-info-note {
+  margin-top: 0.6rem;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  padding-top: 0.6rem;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: rgba(17, 24, 39, 0.75);
 }
 
 .metric-card {

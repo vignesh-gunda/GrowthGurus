@@ -371,8 +371,8 @@ export function CampaignWorkspacePage() {
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
                   <div className="eyebrow">Agent Controls</div>
-                  <h2 className="mt-1 text-2xl font-semibold tracking-[-0.03em]">Run, tweak, approve</h2>
-                  <p className="mt-2 text-sm leading-6 text-[var(--ink-soft)]">
+                  <h2 className="mt-2 text-3xl font-bold tracking-[-0.04em]">Run, tweak, approve</h2>
+                  <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--ink-soft)]">
                     The user controls the pipeline by choosing a zone, adjusting guidance, regenerating sections, and approving the outputs worth keeping.
                   </p>
                 </div>
@@ -636,7 +636,7 @@ function MiniStat({ label, value }: { label: string; value: string }) {
 function ControlField({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm font-medium text-[var(--foreground)]">{label}</span>
+      <span className="text-base font-semibold text-[var(--foreground)]">{label}</span>
       {children}
     </label>
   );
@@ -660,9 +660,9 @@ function TabButton({
 
 function InsightCard({ title, body }: { title: string; body: string }) {
   return (
-    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/70 p-4">
-      <div className="text-sm font-semibold">{title}</div>
-      <div className="mt-2 text-sm leading-6 text-[var(--ink-soft)]">{body}</div>
+    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/70 p-5">
+      <div className="text-lg font-bold text-[var(--foreground)]">{title}</div>
+      <div className="mt-3 text-base leading-7 text-[var(--ink-soft)]">{body}</div>
     </div>
   );
 }
@@ -679,8 +679,8 @@ function EditableCard({
   onChange: (value: string) => void;
 }) {
   return (
-    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/70 p-4">
-      <div className="text-sm font-semibold">{title}</div>
+    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/70 p-5">
+      <div className="text-lg font-bold text-[var(--foreground)]">{title}</div>
       <textarea
         className="field-input mt-3 min-h-28 resize-none"
         value={value}
@@ -705,22 +705,22 @@ function ApproveCard({
   onApprove: () => void;
 }) {
   return (
-    <div className={`rounded-[22px] border p-4 ${approved ? "approved-card" : "border-[var(--panel-border)] bg-white/70"}`}>
+    <div className={`rounded-[22px] border p-5 ${approved ? "approved-card" : "border-[var(--panel-border)] bg-white/70"}`}>
       <div className="flex items-start justify-between gap-4">
-        <div className="text-sm font-semibold">{title}</div>
+        <div className="text-lg font-bold text-[var(--foreground)]">{title}</div>
         <button type="button" className={`approve-button ${approved ? "approve-button-active" : ""}`} onClick={onApprove}>
           {approved ? "Approved" : approveLabel}
         </button>
       </div>
-      <div className="mt-3 text-sm leading-6 text-[var(--ink-soft)]">{body}</div>
+      <div className="mt-3 text-base leading-7 text-[var(--ink-soft)]">{body}</div>
     </div>
   );
 }
 
 function TracePanel({ title, lines }: { title: string; lines: string[] }) {
   return (
-    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/58 p-4">
-      <div className="text-sm font-semibold">{title}</div>
+    <div className="rounded-[22px] border border-[var(--panel-border)] bg-white/58 p-5">
+      <div className="text-lg font-bold text-[var(--foreground)]">{title}</div>
       <div className="mt-3 grid gap-2 text-sm text-[var(--ink-soft)]">
         {lines.map((line) => (
           <div key={line} className="soft-row">
